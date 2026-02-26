@@ -23,7 +23,7 @@
 
             Console.WriteLine("Heads or Tails?");
             
-
+            
             if (coinSide == 1) 
             {
                 Console.WriteLine("Heads!");
