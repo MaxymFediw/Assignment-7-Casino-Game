@@ -17,15 +17,15 @@
 
             Random generator = new Random();
 
-            int points, coinSide, tries, heads, tails;
+            int points, coinSide, tries;
             string guess, keepGoing;
 
-            coinSide = generator.Next(1, 3);
+            
 
             bool done = false;
 
-            Console.WriteLine("You start with 3 points. You lose one point every time you guess wrong, and you gain a point every guess thats correct. If you have 0 points, it's game over. So, Heads or Tails?");
-            guess =Console.ReadLine().ToLower();
+            Console.WriteLine("You start with 3 points. You lose one point every time you guess wrong, and you gain a point every guess thats correct. If you have 0 points, it's game over. So, ");
+            Console.WriteLine();
 
             //heads = 1;
             //tails = 2;
@@ -37,10 +37,12 @@
             while (!done)
             {
 
-                coinSide = generator.Next(1, 3)
+                coinSide = generator.Next(1, 3);
 
-                done = true;
-                
+                Console.WriteLine("Heads or Tails?");
+                guess = Console.ReadLine().ToLower();
+                Console.WriteLine();
+
                 if (guess == "heads" && coinSide == 1)
                 {
                     Console.WriteLine("Heads!");
@@ -78,6 +80,7 @@
                 if (keepGoing == "no" || keepGoing == "No") 
                 {
                     Console.WriteLine("Okay, Goodbye.");
+                    Console.WriteLine("You ended with " + points + " points. Goodbye.");
                     done = true;
                 }
 
@@ -90,6 +93,7 @@
                 if (points == 0) 
                 {
                     Console.WriteLine("You have 0 points remaining. You lose.");
+                    Console.WriteLine("Please insert a $20 bill for 3 more attempts.");
                     done = true;
                 }
 
