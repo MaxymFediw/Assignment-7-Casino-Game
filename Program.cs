@@ -80,7 +80,7 @@
                 if (keepGoing == "no" || keepGoing == "No") 
                 {
                     Console.WriteLine("Okay, Goodbye.");
-                    Console.WriteLine("You ended with " + points + " points. Goodbye.");
+                    Console.WriteLine("You ended with " + points + " points.");
                     done = true;
                 }
 
